@@ -106,7 +106,7 @@ button:hover {
 
 .hero-section {
   min-height: 100svh;
-  padding: 1.25rem 1.25rem 4rem;
+  padding: 1rem 1rem 4rem;
 }
 
 .hero-backdrop {
@@ -272,13 +272,14 @@ h3 {
   display: grid;
   align-content: center;
   min-height: calc(100svh - 5rem);
-  padding: 5rem 0 2rem;
+  padding: 3.5rem 0 2rem;
   animation: hero-rise 900ms ease-out both;
+  position: relative;
 }
 
 .hero-content h1 {
   max-width: 9ch;
-  font-size: clamp(4.1rem, 10vw, 8.8rem);
+  font-size: clamp(3.6rem, 15vw, 8.8rem);
   line-height: 0.92;
   text-wrap: balance;
   text-shadow: 0 0 24px rgba(0, 0, 0, 0.22);
@@ -288,7 +289,7 @@ h3 {
   max-width: 34rem;
   margin: 1rem 0 0;
   color: var(--muted);
-  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  font-size: clamp(1rem, 4.2vw, 1.45rem);
   line-height: 1.6;
 }
 
@@ -300,7 +301,7 @@ h3 {
 }
 
 .hero-status-card {
-  min-width: min(100%, 18rem);
+  width: min(100%, 18rem);
   padding: 0.85rem 0.95rem 0.9rem;
   border: 1px solid rgba(240, 203, 114, 0.18);
   border-radius: 1rem;
@@ -441,7 +442,7 @@ h3 {
 }
 
 .section {
-  padding: 5.5rem 1.25rem;
+  padding: 4.5rem 1rem;
 }
 
 .split-section {
@@ -598,7 +599,7 @@ h3 {
 }
 
 .booking-section {
-  padding: 6rem 1.25rem;
+  padding: 5rem 1rem;
 }
 
 .booking-overlay {
@@ -651,7 +652,7 @@ h3 {
 .site-footer {
   display: grid;
   gap: 1.4rem;
-  padding: 2rem 1.25rem 6rem;
+  padding: 2rem 1rem 6rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -773,6 +774,83 @@ h3 {
   }
 }
 
+@media (max-width: 699px) {
+  .topbar {
+    padding-bottom: 1rem;
+  }
+
+  .brand-mark {
+    padding: 0.75rem 0.9rem 0.75rem 4.2rem;
+  }
+
+  .brand-badge {
+    width: 2.6rem;
+    height: 2.6rem;
+    font-size: 1rem;
+  }
+
+  .brand-kicker,
+  .section-label,
+  .meta-label,
+  .card-kicker,
+  .eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+  }
+
+  .hero-content {
+    align-content: start;
+    padding-top: 2.5rem;
+  }
+
+  .hero-content h1 {
+    max-width: 7ch;
+  }
+
+  .eyebrow-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .hero-status-card {
+    width: 100%;
+    max-width: 22rem;
+  }
+
+  .hero-status-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button-primary,
+  .button-secondary {
+    width: 100%;
+  }
+
+  .hero-stats {
+    margin-top: 2rem;
+  }
+
+  .hero-stats div,
+  .price-callout,
+  .experience-card,
+  .service-card,
+  .barber-card,
+  .review-card,
+  .atmosphere-badge {
+    border-radius: 1.15rem;
+  }
+
+  .booking-meta div {
+    text-align: left;
+  }
+}
+
 @media (min-width: 700px) {
   .services-grid,
   .review-grid {
@@ -824,6 +902,16 @@ h3 {
 
   .hero-content {
     padding-top: 6rem;
+  }
+
+  .eyebrow-row {
+    max-width: 24rem;
+  }
+
+  .hero-status-card {
+    position: absolute;
+    top: 6.25rem;
+    right: 0;
   }
 
   .hero-stats {
